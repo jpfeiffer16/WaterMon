@@ -11,7 +11,7 @@ module.exports = function (app) {
 };
 
 router.get('/generatetestdata', function (req, res, next) {
-  var NUMBEROFRECORDS = 0;
+  var NUMBEROFRECORDS = 365;
   
   
   for (var i = 0; i < NUMBEROFRECORDS; i++) {
@@ -20,6 +20,7 @@ router.get('/generatetestdata', function (req, res, next) {
     });
     record.save();
   }
+  res.send('Done');
   
   
   
