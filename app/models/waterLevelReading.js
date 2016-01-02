@@ -10,4 +10,4 @@ WaterLevelReadingSchema.virtual('date')
     return this._id.getTimestamp();
   });
 
-mongoose.model('WaterLevelReading', WaterLevelReadingSchema);
+module.exports = mongoose.model('WaterLevelReading', WaterLevelReadingSchema);
