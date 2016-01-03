@@ -11,6 +11,7 @@ router.get('/', function (req, res, next) {
   LevelRecordStorage.getAllLevelRecords(function(err, records) {
     if (!err) {
       res.render('index', {
+        title: 'WaterMon',
         records: records
       });
     } else {
