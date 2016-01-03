@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'watermon'
     },
-    port: 3000,
+    port: process.env.PORT || 3000,
     db: 'mongodb://admin:admin@ds037145.mongolab.com:37145/waterlevel'
   },
 
