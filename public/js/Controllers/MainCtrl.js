@@ -1,1 +1,0 @@
-angular.Module('App').controller();

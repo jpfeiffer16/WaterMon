@@ -1,6 +1,12 @@
-<div ng-app ng-controller="MainCtrl">
-    
+<div ng-app="app">
+  <div ng-controller="MainCtrl">
+    <h2>{{test}}</h2>
+    <input type="text" ng-model="test" />
+  </div>
 </div>
-<script src="/components/bootstrap/dist/bootstrap.css"></script>
-<script src="/components/jquery/jquery.js"></script>
+<link href="/components/bootstrap/dist/css/bootstrap.css" type="text/css">
+<script src="/components/jquery/dist/jquery.js"></script>
 <script src="/components/angular/angular.js"></script>
+
+<script src="/js/main.js"></script>
+<script src="/js/controllers/MainCtrl.js"></script>
