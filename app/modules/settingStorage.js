@@ -2,13 +2,21 @@
 var Settings = require('../models/settings.js');
 
 module.exports = {
-    saveSettings: function(callback) {
+    saveSettings: function(settings, callback) {
         Settings.findOne(function(err, result) {
            if (err) return;
            if (result != null) {
                //TODO: Update it here
+               for (var prop in settings) {
+                   result[prop] = settings[prop];
+               }
+               result.save();
            } else {
-               //TODO: Insert it here
+               var newSettings = new Settings();
+               for (var prop in settings) {
+                   newSettings[prop] = settings[prop];
+               }
+               newSettings.save();
            }
         });
     },
