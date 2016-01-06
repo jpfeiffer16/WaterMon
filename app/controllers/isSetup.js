@@ -7,7 +7,7 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/issetup', function (req, res, next) {
+router.post('/issetup', function (req, res, next) {
   SettingStorage.getSettings(function(err, result) {
       if (err) {
           res.status(500).send(err);

@@ -3,11 +3,16 @@ angular.module('app')
 		return (function() {
 			function isSetup(callback) {
 				$http.post('/isSetup', null, null).then(function(data) {
-					console.log(data);
+					if (typeof(callback) == 'function') {
+            callback(data.data.result);
+          }
 				})
-				.error(function (err) {
+				.catch(function (err) {
 					throw err;
 				});
 			}
+      return {
+        isSetup: isSetup
+      }
 		})();
 	});
