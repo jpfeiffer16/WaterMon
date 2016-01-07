@@ -11,8 +11,19 @@ angular.module('app')
 					throw err;
 				});
 			}
+			function saveSettings(settings, callback) {
+				$http.post('/savesettings', null, null).then(function(data) {
+					if (typeof(callback) == 'function') {
+            callback(data.data.result);
+          }
+				})
+				.catch(function (err) {
+					throw err;
+				});
+			}
       return {
-        isSetup: isSetup
-      }
+        isSetup: isSetup,
+        saveSettings: saveSettings
+      };
 		})();
 	});

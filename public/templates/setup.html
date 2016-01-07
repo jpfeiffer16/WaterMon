@@ -1,5 +1,29 @@
 <div class="container" ng-controller="SetupCtrl">
 	<div class="row">
-		
+		<div class="col-md-6">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-edit"></span>	
+				</span>
+				<input class="form-control" placeholder="Name" name="name" type="text" ng-model="name"/>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-arrow-down"></span>	
+				</span>
+				<input class="form-control" placeholder="Empty Depth" name="emptyDepth" type="text" ng-model="emptyDepth"/>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-arrow-up"></span>	
+				</span>
+				<input class="form-control" placeholder="Full Depth" name="fullDepth" type="text" ng-model="fullDepth"/>
+			</div>
+		</div>
+		<button class="btn btn-primary" ng-click="save()">Save</button>
 	</div>
 </div>

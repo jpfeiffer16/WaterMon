@@ -1,4 +1,6 @@
 angular.module('app')
-	.controller('LevelCtrl', function($scope) {
-		$scope.percentage = 60;
+	.controller('LevelCtrl', function($scope, SensorDataProvider) {
+		SensorDataProvider.getLevel(function(result) {
+			$scope.level = result;
+		});
 	});
