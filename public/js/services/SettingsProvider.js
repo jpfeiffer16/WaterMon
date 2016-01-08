@@ -12,7 +12,7 @@ angular.module('app')
 				});
 			}
 			function saveSettings(settings, callback) {
-				$http.post('/savesettings', null, null).then(function(data) {
+				$http.post('/savesettings', settings, null).then(function(data) {
 					if (typeof(callback) == 'function') {
             callback(data.data.result);
           }

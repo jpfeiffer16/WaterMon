@@ -4,7 +4,12 @@ var Settings = require('../models/settings.js');
 module.exports = {
     saveSettings: function(settings, callback) {
         Settings.findOne(function(err, result) {
-           if (err) return;
+           if (err) {
+              if (typeof(callback) == 'function') {
+                  callback();
+              }
+              return;
+           };
            if (result != null) {
                //TODO: Update it here
                for (var prop in settings) {
@@ -13,10 +18,15 @@ module.exports = {
                result.save();
            } else {
                var newSettings = new Settings();
+               console.log(newSettings);
                for (var prop in settings) {
                    newSettings[prop] = settings[prop];
                }
+               console.log(newSettings);
                newSettings.save();
+           }
+           if (typeof(callback) == 'function') {
+              callback();
            }
         });
     },
