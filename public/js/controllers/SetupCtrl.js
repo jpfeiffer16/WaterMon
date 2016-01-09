@@ -4,7 +4,8 @@ angular.module('app')
 			SettingsProvider.saveSettings({
 				name: $scope.name,
 				emptyDepth: $scope.emptyDepth,
-				fullDepth: $scope.fullDepth
+				fullDepth: $scope.fullDepth,
+				capacity: $scope.capacity
 			}, function(result) {
 				console.log(result);
 			});

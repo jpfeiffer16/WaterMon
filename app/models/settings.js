@@ -4,7 +4,8 @@ var mongoose = require('mongoose'),
 var SettingSchema = new Schema({
   name: String,
   emptyDepth: Number,
-  fullDepth: Number
+  fullDepth: Number,
+  capacity: Number
 });
 
 SettingSchema.virtual('date')
