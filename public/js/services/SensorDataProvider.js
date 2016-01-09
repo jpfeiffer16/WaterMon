@@ -6,7 +6,7 @@ angular.module('app')
 				$http.post('/getlevel', null, null)
 					.then(function(data) {
 						if (typeof(callback) == 'function') {
-							callback(data.result);
+							callback(data.data.result);
 						}
 					})
 					.catch(function (err) {

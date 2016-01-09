@@ -7,7 +7,7 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/', function (req, res, next) {
+router.get('/*', function (req, res, next) {
   LevelRecordStorage.getAllLevelRecords(function(err, records) {
     if (!err) {
       res.render('index', {

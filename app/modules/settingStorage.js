@@ -6,7 +6,7 @@ module.exports = {
         Settings.findOne(function(err, result) {
            if (err) {
               if (typeof(callback) == 'function') {
-                  callback();
+                  callback(err);
               }
               return;
            };
