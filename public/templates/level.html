@@ -1,5 +1,7 @@
 <div class="row" ng-controller="LevelCtrl">
   <div class="level-indicator">
-    <div class="water-level" style="height: {{level}};"></div>
+    <div class="water-level" style="height: {{ level.percentage }}%;"></div>
+    <p>{{ level.percentage + '%' }}</p>
   </div>
+  <p>{{ level.fullness }}</p>
 </div>
