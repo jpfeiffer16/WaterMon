@@ -4,6 +4,16 @@ angular.module('app')
 	    restrict: 'E',
 	    replace: true,
 	    link: function(scope, element, attrs) {
+	      
+	      function showScreenMessage(message, duration, explanation) {
+	        //TODO: Do stuff here... Mind = blown... Wow.
+	        
+	        
+	      }
+	      
+	      
+	      
+	      
 	      var message = attrs['message'],
 	        duration = attrs['duration'],
 	        explanation = attrs['explanation'];
