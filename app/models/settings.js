@@ -5,7 +5,8 @@ var SettingSchema = new Schema({
   name: String,
   emptyDepth: Number,
   fullDepth: Number,
-  capacity: Number
+  capacity: Number,
+  enableLevelRecording: { type: Boolean, default: false }
 });
 
 SettingSchema.virtual('date')

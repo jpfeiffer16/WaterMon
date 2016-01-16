@@ -5,7 +5,7 @@
 				<span class="input-group-addon">
 					<span class="glyphicon glyphicon-edit"></span>	
 				</span>
-				<input class="form-control" placeholder="Name" name="name" type="text" ng-model="name"/>
+				<input class="form-control" placeholder="Name" name="name" type="text" ng-model="settings.name"/>
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -13,7 +13,7 @@
 				<span class="input-group-addon">
 					<span class="glyphicon glyphicon-arrow-down"></span>	
 				</span>
-				<input class="form-control" placeholder="Empty Depth" name="emptyDepth" type="text" ng-model="emptyDepth"/>
+				<input class="form-control" placeholder="Empty Depth" name="emptyDepth" type="number" ng-model="settings.emptyDepth"/>
 			</div>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 				<span class="input-group-addon">
 					<span class="glyphicon glyphicon-arrow-up"></span>	
 				</span>
-				<input class="form-control" placeholder="Full Depth" name="fullDepth" type="text" ng-model="fullDepth"/>
+				<input class="form-control" placeholder="Full Depth" name="fullDepth" type="number" ng-model="settings.fullDepth"/>
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -31,7 +31,17 @@
 				<span class="input-group-addon">
 					<span class="glyphicon glyphicon-tint"></span>	
 				</span>
-				<input class="form-control" placeholder="Capacity" name="capacity" type="text" ng-model="capacity"/>
+				<input class="form-control" placeholder="Capacity" name="capacity" type="number" ng-model="settings.capacity"/>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="input-group buffer-bottom">
+				<label>
+					<input type="checkbox" name="enableLevelRecording" ng-model="settings.enableLevelRecording" />
+					Enable Daily Water Level Logging
+				</label>
 			</div>
 		</div>
 	</div>
@@ -40,5 +50,5 @@
 		message="Lets get you set up."
 		explanation="We'll need a little info to get the right measurements for your Cistern."
 		duration="3000"
-		></screen-message>
+	></screen-message>
 </div>
