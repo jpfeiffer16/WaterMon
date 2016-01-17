@@ -1,22 +1,4 @@
 <div ng-app="app" ng-controller="MainCtrl">
-  {{!--<nav class="navbar navbar-default">--}}
-  {{!--  <ul class="nav nav-tabs nav-justified">--}}
-  {{!--    <li>Current Level</li>--}}
-  {{!--    <li>Statistics</li>--}}
-  {{!--    <li>Settings</li>--}}
-  {{!--  </ul>--}}
-  {{!--</nav>--}}
-  {{!--<nav class="navbar navbar-default navbar-fixed-top">--}}
-  {{!--  <div class="container">--}}
-  {{!--   <ul class="nav nav-tabs nav-justified">--}}
-  {{!--    <li>Current Level</li>--}}
-  {{!--    <li>Statistics</li>--}}
-  {{!--    <li>Settings</li>--}}
-  {{!--  </ul>--}}
-  {{!--  </div>--}}
-  {{!--</nav>--}}
-  
-  
   <nav class="navbar navbar-default" style="visibility: \{{ navVisibility }}">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,7 +21,11 @@
           <li><a href="/setup">Settings</a></li>
           
         </ul>
-        
+        <!--<ul class="nav navbar-nav navbar-right">
+          <li>\{{ settings.name }}</li>
+        </ul>-->
+        <p class="navbar-text nav navbar-nav navbar-right">\{{ settings.name }}</p>
+        <!--<h4 class="nav navbar-nav navbar-right">\{{ settings.name }}</h4>-->
         
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -57,6 +43,7 @@
 <script src="/components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/components/angular/angular.js"></script>
 <script src="/components/angular-route/angular-route.js"></script>
+<script src="/components/"></script>
 <script src="/js/main.js"></script>
 <script src="/js/controllers/MainCtrl.js"></script>
 <script src="/js/controllers/LevelCtrl.js"></script>

@@ -35,6 +35,14 @@ a {
   background-color: #8E93BD;
 }
 
+.level-indicator .water-level-percentage {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: block;
+  top: 40%;
+}
+
 .buffer-bottom {
   margin-bottom: 10px;
 }

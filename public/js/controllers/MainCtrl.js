@@ -10,6 +10,10 @@ angular.module('app')
         }
       } else {
         $scope.navVisibility = 'visible';
+        SettingsProvider.getSettings(function(settings) {
+          console.log(settings);
+          $scope.settings = settings;
+        });
       }
     });
   });

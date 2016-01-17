@@ -3,8 +3,9 @@ var SettingStorage = require('./settingStorage'),
 
 
 module.exports = function() {
-	SettingStorage.getSettings(function(err, result) {
-		if (err) throw err;
-		if (result.enableLevelRecording) LevelRecordStorage.startDailyRecording();
-	});
+  //TODO: This is not working. Fix it!
+	// SettingStorage.getSettings(function(err, result) {
+	// 	if (err) throw err;
+	// 	if (result.enableLevelRecording) LevelRecordStorage.startDailyRecording();
+	// });
 };

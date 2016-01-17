@@ -10,7 +10,10 @@ angular.module('app')
               'You\'re all set up. Now we can get to work!',
               3000,
               function() {
+                $scope.$parent.$parent.navVisibility = 'visible';
+                $scope.$parent.$parent.settings = $scope.settings;
                 $location.path('/');
+                $scope.$apply();
               }
             );
           }

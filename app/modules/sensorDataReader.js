@@ -10,9 +10,9 @@ function moduleExport() {
 				return;
 			}
 			if (settings == null) {
-				if (typeof(callback) == 'function') callback({
+				if (typeof(callback) == 'function') callback(null, {
 					empty: true
-				}, null);
+				});
 				return;
 			}
 			var percentage = Math.round(Math.random() * 100),
