@@ -11,7 +11,6 @@ module.exports = {
               return;
            };
            if (result != null) {
-               //TODO: Update it here
                for (var prop in settings) {
                    result[prop] = settings[prop];
                }

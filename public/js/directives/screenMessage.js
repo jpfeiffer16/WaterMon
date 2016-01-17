@@ -4,27 +4,24 @@ angular.module('app')
 	    restrict: 'E',
 	    replace: true,
 	    link: function(scope, element, attrs) {
-	      
-	      function showScreenMessage(message, duration, explanation) {
-	        //TODO: Do stuff here... Mind = blown... Wow.
+	      // var message = attrs['message'],
+        //     duration = attrs['duration'],
+        //     explanation = attrs['explanation'];
+        function showScreenMessage(message, explanation, duration, callback) {
 	        
-	        
+	        $('body').append('<div class="screen-message"><h2>' + message + '</h2><p>' + explanation + '</p></div>')
+            .hide()
+            .fadeIn(1500);
+          if (duration != undefined) {
+            setTimeout(function() {
+              $('.screen-message').fadeOut(1000).remove();
+              if (typeof(callback) == 'function') {
+                callback();
+              }
+            }, duration);
+          }
 	      }
-	      
-	      
-	      
-	      
-	      var message = attrs['message'],
-	        duration = attrs['duration'],
-	        explanation = attrs['explanation'];
-	      $('body').append('<div class="screen-message"><h2>' + message + '</h2><p>' + explanation + '</p></div>')
-	        .hide()
-	        .fadeIn(1500);
-        if (duration != undefined) {
-          setTimeout(function() {
-            $('.screen-message').fadeOut(1000).remove();
-          }, duration);
-        }
+        scope.$parent.$parent.showScreenMessage = showScreenMessage;
 	    }
 	  };
   });

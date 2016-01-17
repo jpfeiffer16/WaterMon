@@ -21,9 +21,20 @@ angular.module('app')
 					throw err;
 				});
 			}
+      function getSettings(callback) {
+        $http.post('/getsettings', null, null).then(function(data) {
+          if (typeof(callback) == 'function') {
+            callback(data.data);
+          }
+        })
+        .catch(function(err) {
+          throw err;
+        });
+      }
       return {
         isSetup: isSetup,
-        saveSettings: saveSettings
+        saveSettings: saveSettings,
+        getSettings: getSettings
       };
 		})();
 	});
