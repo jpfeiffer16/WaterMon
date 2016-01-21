@@ -23,6 +23,11 @@ a {
   margin: auto;
   position: relative;
   background-color: whitesmoke;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 9px;
+  border-color: rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 0px 32px -1px rgba(0, 0, 0, 0.2);
 }
 
 .level-indicator .water-level {
@@ -32,7 +37,7 @@ a {
   bottom: 0;
   transition: height;
   transition-duration: 300ms;
-  background-color: #8E93BD;
+  background-color: #5A94C6;
 }
 
 .level-indicator .water-level-percentage {
