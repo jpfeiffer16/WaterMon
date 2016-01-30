@@ -6,8 +6,8 @@ var WaterLevelReadingSchema = new Schema({
 });
 
 WaterLevelReadingSchema.virtual('date')
-  .get(function(){
-    return this._id.getTimestamp();
-  });
+.get(function(){
+  return this._id.getTimestamp();
+});
 
 module.exports = mongoose.model('WaterLevelReading', WaterLevelReadingSchema);

@@ -10,8 +10,8 @@ var SettingSchema = new Schema({
 });
 
 SettingSchema.virtual('date')
-  .get(function(){
-    return this._id.getTimestamp();
-  });
+.get(function(){
+  return this._id.getTimestamp();
+});
 
 module.exports = mongoose.model('Settings', SettingSchema);

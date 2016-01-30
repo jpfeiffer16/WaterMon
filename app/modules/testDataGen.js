@@ -1,9 +1,9 @@
 module.exports = (function() {
-    function generateRecordingRecords() {
-        
-    }
-    
-    return {
-        
-    }
+  function generateRecordingRecords() {
+
+  }
+
+  return {
+
+  }
 })();
